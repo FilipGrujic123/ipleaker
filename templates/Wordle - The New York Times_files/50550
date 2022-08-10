@@ -1,0 +1,44 @@
+var bk_results = {
+	"campaigns": [
+		{
+			"campaign": 221330,
+			"timestamp": 1656693682,
+			"categories": [
+				{
+					"categoryID": 1021885,
+					"timestamp": 1656693682
+				}
+			]
+		},
+		{
+			"campaign": 221329,
+			"timestamp": 1656693682,
+			"categories": [
+				{
+					"categoryID": 1024818,
+					"timestamp": 1656693682
+				}
+			]
+		},
+		{
+			"campaign": 221253,
+			"timestamp": 1656693682,
+			"categories": [
+				{
+					"categoryID": 1024818,
+					"timestamp": 1656693682
+				}
+			]
+		},
+		{
+			"campaign": 221243,
+			"timestamp": 1656693682,
+			"categories": [
+				{
+					"categoryID": 997862,
+					"timestamp": 1656693682
+				}
+			]
+		}
+	]
+};

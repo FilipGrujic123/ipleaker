@@ -1,0 +1,2059 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://www.nytimes.com/games/wordle/index.html -->
+<html lang="en" class="pz-dont-touch"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><meta name="theme-color" content="#000000"><title>Wordle - The New York Times</title><link rel="manifest" href="https://www.nytimes.com/games-assets/v2/metadata/wordle-web-manifest.json?v=v2207011043"><link rel="apple-touch-icon" sizes="180x180" href="https://www.nytimes.com/games-assets/v2/metadata/wordle-apple-touch-icon.png?v=v2207011043"><link rel="mask-icon" color="#FFFFFF" href="https://www.nytimes.com/games-assets/v2/metadata/wordle-safari-pinned-tab.svg?v=v2207011043"><link rel="shortcut icon" href="https://www.nytimes.com/games-assets/v2/metadata/wordle-favicon.ico?v=v2207011043"><link href="https://www.nytimes.com/games-assets/v2/wordle/images/wordle_logo_32x32.png" rel="icon shortcut" sizes="3232"><link href="https://www.nytimes.com/games-assets/v2/wordle/images/wordle_logo_192x192.png" rel="apple-touch-icon"><meta name="apple-mobile-web-app-title" content="Wordle"><meta name="application-name" content="Wordle"><meta name="msapplication-TileColor" content="#FFFFFF"><meta name="theme-color" content="#FFFFFF"><meta name="sourceApp" content="games-crosswords"><meta property="description" content="Guess the hidden word in 6 tries. A new puzzle is available each day."><meta property="og:title" content="Wordle - A daily word game"><meta property="og:url" content="https://www.nytimes.com/games/wordle"><meta property="og:description" content="Guess the hidden word in 6 tries. A new puzzle is available each day."><meta property="og:image" content="https://www.nytimes.com/games-assets/v2/wordle/images/wordle_og_1200x630.png"><meta property="twitter:card" content="summary_large_image"><meta property="twitter:domain" content="nytimes.com"><meta property="theme-color" content="#6aaa64"><link rel="stylesheet" type="text/css" href="./Wordle - The New York Times_files/wordle.6b88b1c8c6541b07820ab0896f6bc19be0ae34b2.css"><link rel="preload" as="script" href="https://rumcdn.geoedge.be/b3960cc6-bfd2-4adc-910c-6e917e8a6a0e/grumi.js"><script type="text/javascript" async="" src="./Wordle - The New York Times_files/c.js.download"></script><script async="" src="./Wordle - The New York Times_files/chartbeat.js.download"></script><script type="text/javascript" async="" id="iterate-script" src="./Wordle - The New York Times_files/match-prod-765a805e29312476b6b7.js.download"></script><script type="text/javascript" async="" src="./Wordle - The New York Times_files/gpt.js.download"></script><script type="text/javascript" async="" src="./Wordle - The New York Times_files/cs.js.download"></script><script id="iterate-js" async="" src="./Wordle - The New York Times_files/loader.js.download"></script><script type="text/javascript" async="" src="./Wordle - The New York Times_files/tcb.js.download"></script><script type="text/javascript" async="" src="./Wordle - The New York Times_files/pubcid.php"></script><script type="text/javascript" async="" src="./Wordle - The New York Times_files/sync"></script><script src="./Wordle - The New York Times_files/grumi-ip.js.download" async=""></script><script src="./Wordle - The New York Times_files/bidexchange.js.download" async=""></script><script src="./Wordle - The New York Times_files/apstag.js.download" async=""></script><style type="text/css">.Tile-module_tile__3ayIZ {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: bold;
+  vertical-align: middle;
+  box-sizing: border-box;
+  color: var(--tile-text-color);
+  text-transform: uppercase;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.Tile-module_tile__3ayIZ::before {
+  content: "";
+  display: inline-block;
+  padding-bottom: 100%;
+}
+
+/* Allow tiles to be smaller on small screens */
+@media (max-height: 600px) {
+  .Tile-module_tile__3ayIZ {
+    font-size: 1em;
+    line-height: 1em;
+  }
+}
+.Tile-module_tile__3ayIZ[data-state=empty] {
+  border: 2px solid var(--color-tone-4);
+}
+
+.Tile-module_tile__3ayIZ[data-state=tbd] {
+  background-color: var(--color-tone-7);
+  border: 2px solid var(--color-tone-3);
+  color: var(--color-tone-1);
+}
+
+.Tile-module_tile__3ayIZ[data-state=correct] {
+  background-color: var(--color-correct);
+}
+
+.Tile-module_tile__3ayIZ[data-state=present] {
+  background-color: var(--color-present);
+}
+
+.Tile-module_tile__3ayIZ[data-state=absent] {
+  background-color: var(--color-absent);
+}
+
+.Tile-module_tile__3ayIZ[data-animation=pop] {
+  -webkit-animation-name: Tile-module_PopIn__bu7hb;
+          animation-name: Tile-module_PopIn__bu7hb;
+  -webkit-animation-duration: 100ms;
+          animation-duration: 100ms;
+}
+
+@-webkit-keyframes Tile-module_PopIn__bu7hb {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  40% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes Tile-module_PopIn__bu7hb {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  40% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+.Tile-module_tile__3ayIZ[data-animation=flip-in] {
+  -webkit-animation-name: Tile-module_FlipIn__scjpz;
+          animation-name: Tile-module_FlipIn__scjpz;
+  -webkit-animation-duration: 250ms;
+          animation-duration: 250ms;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+
+@-webkit-keyframes Tile-module_FlipIn__scjpz {
+  0% {
+    transform: rotateX(0);
+  }
+  100% {
+    transform: rotateX(-90deg);
+  }
+}
+
+@keyframes Tile-module_FlipIn__scjpz {
+  0% {
+    transform: rotateX(0);
+  }
+  100% {
+    transform: rotateX(-90deg);
+  }
+}
+.Tile-module_tile__3ayIZ[data-animation=flip-out] {
+  -webkit-animation-name: Tile-module_FlipOut__e4DRI;
+          animation-name: Tile-module_FlipOut__e4DRI;
+  -webkit-animation-duration: 250ms;
+          animation-duration: 250ms;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+
+@-webkit-keyframes Tile-module_FlipOut__e4DRI {
+  0% {
+    transform: rotateX(-90deg);
+  }
+  100% {
+    transform: rotateX(0);
+  }
+}
+
+@keyframes Tile-module_FlipOut__e4DRI {
+  0% {
+    transform: rotateX(-90deg);
+  }
+  100% {
+    transform: rotateX(0);
+  }
+}</style><style type="text/css">.Help-module_instructions__54IDr {
+  font-size: 14px;
+  color: var(--color-tone-1);
+}
+
+.Help-module_examples__eeiMV {
+  border-bottom: 1px solid var(--color-tone-4);
+  border-top: 1px solid var(--color-tone-4);
+}
+
+.Help-module_example__3UNrs {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.Help-module_tileContainer__WmMQw {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 4px;
+}
+
+.Help-module_page__uQ7Xi {
+  padding: 16px;
+  padding-top: 0px;
+}
+
+/*---auth---*/
+.Help-module_statsLogin__j0k72 {
+  color: var(--color-tone-1);
+  font-size: 14px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+  padding-top: 24px;
+}
+.Help-module_statsLogin__j0k72 a {
+  font-weight: 700;
+  color: var(--color-tone-1);
+}
+.Help-module_statsLogin__j0k72 .Help-module_loginArrow__H-3mD {
+  text-decoration: none;
+  justify-self: flex-end;
+}
+.Help-module_statsLogin__j0k72 .Help-module_loginText__Osqyn {
+  flex-grow: 2;
+}
+.Help-module_statsLogin__j0k72 .Help-module_statsIcon__pQSyR {
+  margin-right: 16px;
+}
+.Help-module_statsLogin__j0k72 .Help-module_rule__wlOx- {
+  margin-left: -16px;
+  height: 1px;
+  position: absolute;
+  width: 100%;
+  background-color: var(--color-tone-1);
+  margin-bottom: 70px;
+  box-shadow: 0px 0px 2px rgba(50, 50, 50, 0.75);
+}</style><style type="text/css">.Stats-module_gameStats__ZP1aW {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 16px;
+}
+.Stats-module_gameStats__ZP1aW h1 {
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.Stats-module_statistics__Hke7Z {
+  display: flex;
+}
+
+.Stats-module_statisticContainer__XORTW {
+  flex: 1;
+}
+
+.Stats-module_statisticContainer__XORTW .Stats-module_statistic__fr8JZ {
+  font-size: 36px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: 0.05em;
+  font-variant-numeric: proportional-nums;
+}
+
+.Stats-module_statistic__fr8JZ.Stats-module_timer__xn2mu {
+  font-variant-numeric: initial;
+}
+
+.Stats-module_statisticContainer__XORTW .Stats-module_label__pLAui {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.Stats-module_guessDistribution__J8Int {
+  width: 80%;
+}
+
+.Stats-module_graphContainer__BlVFU {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 4px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.Stats-module_graphContainer__BlVFU .Stats-module_graph__l2LGn {
+  width: 100%;
+  height: 100%;
+  padding-left: 4px;
+}
+
+.Stats-module_graphContainer__BlVFU .Stats-module_graph__l2LGn .Stats-module_graphBar__TvsIP {
+  height: 100%;
+  /* Assume no wins */
+  width: 0%;
+  position: relative;
+  background-color: var(--color-absent);
+  display: flex;
+  justify-content: center;
+}
+
+.Stats-module_graphContainer__BlVFU .Stats-module_graph__l2LGn .Stats-module_graphBar__TvsIP.Stats-module_highlight__fBBiL {
+  background-color: var(--color-correct);
+}
+
+.Stats-module_graphContainer__BlVFU .Stats-module_graph__l2LGn .Stats-module_graphBar__TvsIP.Stats-module_alignRight__29Xhl {
+  justify-content: flex-end;
+  padding-right: 8px;
+}
+
+.Stats-module_graphContainer__BlVFU .Stats-module_graph__l2LGn .Stats-module_numGuesses__aB7UF {
+  font-weight: bold;
+  color: var(--tile-text-color);
+}
+
+.Stats-module_statistics__Hke7Z,
+.Stats-module_guessDistribution__J8Int {
+  padding-bottom: 10px;
+}
+
+.Stats-module_footer__IY-Bt {
+  display: flex;
+  width: 100%;
+}
+
+.Stats-module_countdown__a-cWu {
+  border-right: 1px solid var(--color-tone-1);
+  padding-right: 12px;
+  width: 50%;
+}
+
+.Stats-module_share__kfJ-m {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 12px;
+  width: 50%;
+}
+
+.Stats-module_noData__D3wkv {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.Stats-module_shareButton__eNFFD {
+  background-color: var(--key-bg-correct);
+  color: var(--key-evaluated-text-color);
+  font-family: inherit;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  text-transform: uppercase;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
+  width: 80%;
+  font-size: 20px;
+  height: 52px;
+  filter: brightness(100%);
+}
+
+@media (max-width: 444px) {
+  .Stats-module_shareButton__eNFFD {
+    font-size: 16px;
+  }
+}
+.Stats-module_shareButton__eNFFD:hover {
+  opacity: 0.9;
+}
+
+.Stats-module_shareIconContainer__j2o6K {
+  width: 24px;
+  height: 24px;
+  padding-left: 8px;
+}
+
+.Stats-module_statsBtnLeft__q1PQ8 {
+  justify-content: unset;
+  width: 80%;
+  margin: 10px 0px 15px 15px;
+}
+
+.Stats-module_statsBtnCenter__Kgi5x {
+  margin: 10px;
+}
+
+.Stats-module_statsInfoBtn__WUPls {
+  all: unset;
+  text-decoration: underline;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--color-tone-1);
+}
+
+.Stats-module_promoButton__8dcY3 {
+  border: 1px solid var(--color-tone-1);
+  padding: 10px;
+  border-radius: 105px;
+  background: var(--color-tone-7);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: inherit;
+  text-decoration: none;
+  width: 150px;
+  display: flex;
+  width: 66%;
+  align-items: center;
+  margin-right: 5px;
+  vertical-align: middle;
+  justify-content: center;
+}
+
+.Stats-module_promoIcon__1c9qr {
+  width: 25px;
+  height: 25px;
+  background-image: var(--spelling-bee-promo);
+  background-size: 25px;
+  background-position: center;
+  margin-left: 5px;
+}
+
+.Stats-module_promoButtonContainer__xUFtx {
+  border-top: 1px solid var(--gray-3);
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  padding-top: 20px;
+}</style><style type="text/css">.Promo-module_promo__OjSS6 {
+  margin-top: 12px;
+  width: 100%;
+}
+
+.Promo-module_promoLink__9Rsas {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+  padding-top: 16px;
+}
+.Promo-module_promoLink__9Rsas:hover {
+  --svg-arrow-fill: var(--svg-arrow-fill-hover);
+  --svg-arrow-stroke: var(--svg-arrow-stroke-hover);
+}
+.Promo-module_promoLink__9Rsas:hover .Promo-module_promoCta__J70IK {
+  text-decoration: underline;
+}
+
+.Promo-module_promoText__wg6Vu {
+  font-family: "nyt-franklin-500";
+  font-size: 14px;
+  color: var(--color-tone-1);
+  flex-grow: 2;
+  line-height: 16px;
+}
+
+.Promo-module_promoTitle__TgBo2 {
+  font-family: "nyt-franklin";
+  font-weight: 700;
+}
+
+.Promo-module_promoCta__J70IK {
+  display: block;
+  font-family: "nyt-franklin";
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+/* Text balancing */
+.Promo-module_promoTextPrimary__chnyc {
+  display: inline;
+}
+
+/* Text balancing */
+.Promo-module_promoTextSecondary__mjI5B {
+  display: inline;
+}
+
+/* Text balancing */
+@media (max-width: 500px) {
+  .Promo-module_promoTextPrimary__chnyc {
+    display: block;
+  }
+
+  .Promo-module_promoTextSecondary__mjI5B {
+    display: block;
+  }
+}
+.Promo-module_promoIcon__GIqUm {
+  width: var(--promo-icon-width);
+  height: var(--promo-icon-height);
+  margin-right: 16px;
+  padding: var(--promo-icon-padding);
+}
+
+.Promo-module_promoArrow__iqw6N {
+  justify-self: flex-end;
+}
+
+.Promo-module_rule__Yn4Pk {
+  margin-left: -16px;
+  height: 1px;
+  position: absolute;
+  width: 100%;
+  background-color: var(--color-tone-4);
+}</style><style type="text/css">.AuthCTA-module_container__mFg-m {
+  border-top: 1px solid var(--gray-3);
+  width: 100%;
+  text-align: left;
+  display: flex;
+  padding: 10px;
+}
+
+.AuthCTA-module_icon__fZT88 {
+  padding: 10px 10px 0px 0px;
+}
+
+.AuthCTA-module_promoIcon__2-SRz {
+  width: 25px;
+  height: 25px;
+  background-image: var(--spelling-bee-promo);
+  background-size: 25px;
+  background-position: center;
+  margin-left: 5px;
+}
+
+.AuthCTA-module_textContainer__kIjDX > p {
+  margin: 5px;
+}
+.AuthCTA-module_textContainer__kIjDX .AuthCTA-module_bold__ThmkP {
+  color: var(--color-tone-1);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+.AuthCTA-module_textContainer__kIjDX .AuthCTA-module_subText__2Qsw5 {
+  color: var(--color-tone-2);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+.AuthCTA-module_textContainer__kIjDX .AuthCTA-module_title__iBYtq {
+  color: #2671dc;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.AuthCTA-module_buttonsContainer__y0b1J {
+  text-align: center;
+  margin-top: 10px;
+}
+.AuthCTA-module_buttonsContainer__y0b1J .AuthCTA-module_moreLink__pAJHo {
+  all: unset;
+  text-decoration: underline;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--color-tone-2);
+  margin: 20px;
+}
+.AuthCTA-module_buttonsContainer__y0b1J .AuthCTA-module_loginButton__0FcEr {
+  background-color: var(--color-tone-7);
+  color: var(--color-tone-1);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 12px;
+  border: 1px solid var(--color-tone-1);
+  border-radius: 55px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  padding: 10px 40px;
+}
+
+.AuthCTA-module_footer__9-hGG {
+  text-align: center;
+  width: 100%;
+  border-top: 1px solid var(--gray-3);
+}
+.AuthCTA-module_footer__9-hGG p {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  align-items: center;
+  letter-spacing: 0.07em;
+}
+
+.AuthCTA-module_footerContainer__j9w3x {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.AuthCTA-module_footerContainer__j9w3x > a.AuthCTA-module_promoButton__i3iNK,
+.AuthCTA-module_footerContainer__j9w3x button.AuthCTA-module_shareButton__SsNA6 {
+  width: 50%;
+  margin: 2px;
+}
+
+.AuthCTA-module_promoButton__i3iNK {
+  border: 1px solid var(--color-tone-1);
+  padding: 10px;
+  border-radius: 105px;
+  background: var(--color-tone-7);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+  vertical-align: middle;
+  justify-content: center;
+}
+
+.AuthCTA-module_shareButton__SsNA6 {
+  background-color: var(--green);
+  color: var(--color-tone-7);
+  border-radius: 104px;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  vertical-align: middle;
+}
+
+#AuthCTA-module_shareIcon__x5WtP {
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.AuthCTA-module_shareText__o7WL- {
+  color: var(--white);
+}</style><style type="text/css">.Switch-module_container__DiBse {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Switch-module_switch__LLcMj {
+  height: 20px;
+  width: 32px;
+  background: var(--color-tone-3);
+  border: none;
+  border-radius: 999px;
+  display: block;
+  position: relative;
+}
+
+.Switch-module_knob__oRTpP {
+  display: block;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  height: calc(100% - 4px);
+  width: 50%;
+  border-radius: 8px;
+  background: var(--white);
+  transform: translateX(0);
+  transition: transform 0.3s;
+}
+
+.Switch-module_checked__81fA3 .Switch-module_switch__LLcMj {
+  background: var(--color-correct);
+}
+.Switch-module_checked__81fA3 .Switch-module_knob__oRTpP {
+  transform: translateX(calc(100% - 4px));
+}
+
+.Switch-module_container__DiBse.Switch-module_disabled__6ofuZ .Switch-module_switch__LLcMj {
+  opacity: 0.5;
+}</style><style type="text/css">.Settings-module_setting__IdN-T {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-tone-4);
+  padding: 16px 0;
+}
+.Settings-module_setting__IdN-T a,
+.Settings-module_setting__IdN-T a:visited {
+  color: var(--color-tone-2);
+}
+
+.Settings-module_title__f-cFy {
+  font-size: 18px;
+}
+
+.Settings-module_text__o3woy {
+  padding-right: 8px;
+}
+
+.Settings-module_description__rTo9u {
+  font-size: 12px;
+  color: var(--color-tone-2);
+}
+
+.Settings-module_footnote__UtMtH {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  color: var(--color-tone-2);
+  font-size: 12px;
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+@media (min-width: 501px) {
+  .Settings-module_footnote__UtMtH.Settings-module_enableAuth__TOxGg {
+    position: initial;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .Settings-module_setting__IdN-T {
+    padding: 16px;
+  }
+}</style><style type="text/css">.Modal-module_modalOverlay__81ZCi {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--opacity-50);
+  z-index: var(--modal-z-index);
+}
+
+.Modal-module_content__s8qUZ {
+  position: relative;
+  border-radius: 8px;
+  border: 1px solid var(--color-tone-6);
+  background-color: var(--modal-content-bg);
+  color: var(--color-tone-1);
+  box-shadow: 0 4px 23px 0 rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
+  -webkit-animation: Modal-module_SlideIn__g77Ik 200ms;
+          animation: Modal-module_SlideIn__g77Ik 200ms;
+  max-width: var(--game-max-width);
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.Modal-module_content__s8qUZ.Modal-module_closing__pgA2s {
+  -webkit-animation: Modal-module_SlideOut__Ev3zj 200ms;
+          animation: Modal-module_SlideOut__Ev3zj 200ms;
+}
+
+.Modal-module_closeIcon__b4z74 {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+.Modal-module_heading__oD1Ps.Modal-module_enableAuth__SR682 {
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 0px;
+  display: block;
+}
+
+@media (max-width: 500px) {
+  .Modal-module_modalOverlay__81ZCi.Modal-module_enableAuth__SR682 {
+    align-items: flex-end;
+  }
+
+  .Modal-module_content__s8qUZ.Modal-module_enableAuth__SR682 {
+    min-height: 70%;
+    width: 100%;
+  }
+
+  .Modal-module_content__s8qUZ.Modal-module_shortStatsModal__QXJBs {
+    min-height: unset;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+}
+@-webkit-keyframes Modal-module_SlideIn__g77Ik {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes Modal-module_SlideIn__g77Ik {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes Modal-module_SlideOut__Ev3zj {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+}
+@keyframes Modal-module_SlideOut__Ev3zj {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+}</style><style type="text/css">.Nav-module_container__pzbhW {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+.Nav-module_container__pzbhW a.Nav-module_navLink__7jXMp {
+  text-decoration: none;
+  color: inherit;
+}
+
+.Nav-module_gameList__izZcv,
+.Nav-module_nytList__Nrzcc {
+  list-style: none;
+  color: var(--color-tone-1);
+  padding: unset;
+  margin: unset;
+}
+
+.Nav-module_nytList__Nrzcc {
+  margin-top: 5px;
+  padding: 12px 0px;
+  border-top: 1px solid #dcdcdc;
+}
+
+.Nav-module_navItem__Kfeh3 {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 40px;
+  font-family: "nyt-franklin-500";
+  font-size: 16px;
+  line-height: 16px;
+  padding-left: 18px;
+  --hover-color: var(--color-nav-hover);
+}
+
+.Nav-module_navItem__Kfeh3:hover {
+  background-color: var(--hover-color);
+}
+
+.Nav-module_navIcon__mgXpj {
+  padding-bottom: 2px;
+  content: "";
+  height: 20px;
+  width: 28px;
+  padding-right: 8px;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-size: "20px";
+}
+
+.Nav-module_navHeader__KJ4Rd {
+  padding-top: 18px;
+  padding-left: 18px;
+}
+
+.Nav-module_moreText__-hcDZ {
+  font-family: "nyt-franklin";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 12px;
+  margin: 32px 0px 24px 0px;
+  padding-left: 18px;
+}
+
+.Nav-module_privacy__H6Jto, .Nav-module_privacyStatic__f2hFM {
+  letter-spacing: 0.5px;
+  font-family: "nyt-franklin-500";
+  margin: 0px 25px 0px 17px;
+  padding: 12px 0px;
+  border-top: 1px solid #dcdcdc;
+  color: var(--color-tone-1);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.Nav-module_privacyItem__F1mag {
+  height: 40px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  color: var(--color-tone-1);
+}
+
+.Nav-module_privacyStatic__f2hFM {
+  position: static;
+}</style><style type="text/css">.NavAccount-module_navLoggedIn__QNQGf, .NavAccount-module_navLoggedOut__yVhCA {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  padding: 8px;
+}
+
+.NavAccount-module_navLoggedOut__yVhCA {
+  padding: 16px;
+}
+
+.NavAccount-module_navDrawerHeading__KRAqm {
+  font-family: "nyt-franklin";
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  line-height: 14px;
+  display: block;
+  padding: 0px 10px;
+}
+
+.NavAccount-module_navDrawerAccount__WqYWH {
+  border-top: 1px solid #000;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--color-tone-7);
+  margin-top: 3px;
+}
+
+.NavAccount-module_navProfileAccount__sqIxG {
+  padding: 5px;
+}
+
+.NavAccount-module_navButton__KTP0f, .NavAccount-module_logoutButton__rHSrz, .NavAccount-module_subscribeButton__9oHNa, .NavAccount-module_loginButton__ANAQ0 {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  font-family: "nyt-franklin";
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.047em;
+  text-transform: uppercase;
+  height: 36px;
+  border: 1px solid #f4f4f4;
+  border-radius: 3px;
+  color: #fff;
+  border-color: #000;
+  background-color: #000;
+  padding: 1px 33px 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.NavAccount-module_navDrawerLink__YqJIR {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  border-left: 4px solid transparent;
+  padding: 0 16px 0 8px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.NavAccount-module_navDrawerLink__YqJIR:hover {
+  background-color: var(--color-nav-hover);
+}
+
+.NavAccount-module_loginButton__ANAQ0 {
+  color: #000;
+  border-color: #000;
+  background-color: #fff;
+  margin-left: 8px;
+}
+
+.NavAccount-module_loginButton__ANAQ0:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+.NavAccount-module_subscribeButton__9oHNa {
+  color: #fff;
+  background-color: #000;
+}
+
+.NavAccount-module_subscribeButton__9oHNa:hover {
+  background-color: #797987;
+  border: none;
+}
+
+.NavAccount-module_logoutButton__rHSrz {
+  color: var(--color-tone-1);
+  background-color: var(--color-tone-7);
+  border: 1px solid var(--color-tone-1);
+  border-radius: 3px;
+}
+
+.NavAccount-module_logoutButton__rHSrz:hover {
+  background-color: #ebebeb;
+}
+
+@media (max-height: 700px) {
+  .NavAccount-module_navDrawerAccount__WqYWH {
+    position: unset;
+  }
+}</style><style type="text/css">.NavModal-module_overlayNav__3y8p3 {
+  display: flex;
+  justify-content: left;
+  align-items: unset;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: var(--modal-z-index);
+  background-color: transparent;
+}
+
+.NavModal-module_contentNav__wMSAL {
+  position: relative;
+  border: 1px solid var(--color-tone-6);
+  background-color: var(--modal-content-bg);
+  color: var(--color-tone-1);
+  overflow-y: auto;
+  -webkit-animation: NavModal-module_SlideRight__DNLx- 200ms;
+          animation: NavModal-module_SlideRight__DNLx- 200ms;
+  max-width: var(--game-max-width);
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 0px;
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.15);
+  max-height: calc(100% - var(--header-height) - 1px);
+  margin-top: calc(var(--header-height) + 1px);
+  padding: 0px;
+}
+
+@media (min-width: 415px) {
+  .NavModal-module_contentNav__wMSAL {
+    width: 375px;
+  }
+}
+.NavModal-module_contentNav__wMSAL.NavModal-module_closingNav__OIIRY {
+  -webkit-animation: NavModal-module_SlideLeft__7Veo2 200ms;
+          animation: NavModal-module_SlideLeft__7Veo2 200ms;
+}
+
+.NavModal-module_closeIconNav__2gqUi {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+@-webkit-keyframes NavModal-module_SlideRight__DNLx- {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes NavModal-module_SlideRight__DNLx- {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes NavModal-module_SlideLeft__7Veo2 {
+  0% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+}
+@keyframes NavModal-module_SlideLeft__7Veo2 {
+  0% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+}</style><style type="text/css">.Explainer-module_title__-DKFu {
+  font-family: "nyt-franklin";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-left: 10px;
+  color: var(--color-tone-1);
+}
+
+.Explainer-module_containerLink__CFd3e {
+  padding: 30px;
+}
+.Explainer-module_containerLink__CFd3e p:last-child {
+  font-weight: 700;
+}
+
+.Explainer-module_containerProblems__8fCRH {
+  padding: 30px;
+}
+
+.Explainer-module_explainerFooterText__ZeeBX {
+  margin: 30px;
+  padding-top: 30px;
+  border-top: 1px solid var(--gray-2);
+}
+
+.Explainer-module_text__keVaW {
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-left: 10px;
+  color: var(--color-tone-1);
+}
+.Explainer-module_text__keVaW > a {
+  color: inherit;
+}
+
+.Explainer-module_statsLinkContainer__1PALX {
+  margin-top: 50px;
+}
+
+.Explainer-module_loginButton__XupvV {
+  padding-top: 50px;
+  height: 44px;
+  width: 289px;
+  background: var(--color-tone-1);
+  border-radius: 104px;
+  padding: 10px;
+  text-decoration: none;
+  color: var(--color-tone-7);
+  font-weight: 700;
+  line-height: 14px;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px 40px;
+  margin-top: 20px;
+  border: none;
+}
+
+.Explainer-module_gamesIcon__spKfI {
+  width: 95px;
+  height: 18px;
+}
+
+.Explainer-module_headerNew__SaqiR {
+  padding: 15px 0px;
+}
+.Explainer-module_headerNew__SaqiR > p {
+  text-align: center;
+  margin: 10px 0px;
+}
+
+.Explainer-module_close__F3zLu {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  position: absolute;
+  right: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  margin: 0;
+  margin-right: 30px;
+}</style><style type="text/css">.StatsLink-module_container__G4oYM {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.StatsLink-module_header__8CPRA {
+  align-items: center;
+  border-bottom: 1px solid var(--gray-2);
+  display: flex;
+  height: 3em;
+  justify-content: center;
+}
+
+.StatsLink-module_logo__Kx2s- {
+  position: relative;
+  top: 5px;
+}
+
+.StatsLink-module_content__7z9K3 {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding-left: 1.25em;
+  padding-right: 1.25em;
+  padding-top: 6em;
+}
+
+.StatsLink-module_statsIconWrapper__lzf6R {
+  position: relative;
+  height: 12em;
+  width: 12em;
+  margin-bottom: 2em;
+}
+
+.StatsLink-module_statsFailureBadge__qQmvE {
+  position: absolute;
+  height: 2.75em;
+  width: 2.75em;
+  top: -0.75em;
+  right: -0.75em;
+}
+
+.StatsLink-module_statsIcon__-nU-- {
+  height: 12em;
+  width: 12em;
+}
+
+.StatsLink-module_headingWrapper__DV4V8 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.StatsLink-module_heading__8G3Jk {
+  font-family: nyt-cheltenham;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+}
+
+.StatsLink-module_paragraphWrapper__5sxeO {
+  text-align: center;
+  margin-bottom: 1.25em;
+}
+
+.StatsLink-module_paragraph__Q-baL {
+  font-family: nyt-franklin;
+  font-size: 1em;
+  margin: 0;
+}
+
+.StatsLink-module_button__F7k0J {
+  background: var(--black-2);
+  border: none;
+  border-radius: 3px;
+  color: var(--white);
+  font-family: nyt-franklin;
+  font-weight: 600;
+  font-size: 1em;
+  height: 3em;
+  width: 100%;
+}
+
+.StatsLink-module_footer__Qxrmi {
+  padding-top: 2.5em;
+  text-align: center;
+}
+
+.StatsLink-module_buttonAsLink__kErTh {
+  all: unset;
+  text-decoration: underline;
+  cursor: pointer;
+  color: var(--black-3);
+  font-family: nyt-franklin;
+}
+
+.StatsLink-module_link__YBHY7 {
+  font-family: nyt-franklin;
+  font-size: 1em;
+  color: var(--black-3);
+}</style><style type="text/css">.Page-module_page__YqrWy {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  background-color: var(--color-background);
+  -webkit-animation: Page-module_SlideIn__T-Lu3 100ms linear;
+          animation: Page-module_SlideIn__T-Lu3 100ms linear;
+  z-index: var(--page-z-index);
+}
+.Page-module_page__YqrWy.Page-module_closing__uVg4f {
+  -webkit-animation: Page-module_SlideOut__U2w2g 150ms linear;
+          animation: Page-module_SlideOut__U2w2g 150ms linear;
+}
+.Page-module_page__YqrWy header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.Page-module_page__YqrWy h1 {
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.Page-module_pageNew__YeTYy {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  background-color: var(--color-background);
+  -webkit-animation: Page-module_SlideIn__T-Lu3 100ms linear;
+          animation: Page-module_SlideIn__T-Lu3 100ms linear;
+  z-index: var(--page-z-index);
+  overflow-y: scroll;
+  display: flex;
+}
+.Page-module_pageNew__YeTYy .Page-module_gamesIcon__VFFP9 {
+  width: 95px;
+  height: 18px;
+}
+.Page-module_pageNew__YeTYy .Page-module_close__D3gaa {
+  margin-right: 30px;
+}
+.Page-module_pageNew__YeTYy.Page-module_closing__uVg4f {
+  -webkit-animation: Page-module_SlideOut__U2w2g 150ms linear;
+          animation: Page-module_SlideOut__U2w2g 150ms linear;
+}
+
+.Page-module_headerNew__7DIpY {
+  padding: 15px 0px;
+}
+.Page-module_headerNew__7DIpY > p {
+  text-align: center;
+  margin: 10px 0px;
+}
+
+.Page-module_content__hwN4l {
+  position: relative;
+  color: var(--color-tone-1);
+  padding: 0 32px;
+  max-width: var(--game-max-width);
+  width: 100%;
+  overflow-y: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Page-module_contentContainer__KZJPh {
+  height: 100%;
+}
+
+.Page-module_close__D3gaa {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  position: absolute;
+  right: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  margin: 0;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .Page-module_content__hwN4l {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .Page-module_close__D3gaa {
+    padding: 0 16px;
+  }
+}
+@-webkit-keyframes Page-module_SlideIn__T-Lu3 {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes Page-module_SlideIn__T-Lu3 {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes Page-module_SlideOut__U2w2g {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+}
+@keyframes Page-module_SlideOut__U2w2g {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+}</style><style type="text/css">.ToastContainer-module_toaster__QDad3 {
+  position: absolute;
+  top: 45px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  pointer-events: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+#ToastContainer-module_gameToaster__yjzPn {
+  z-index: var(--toast-z-index);
+}
+
+#ToastContainer-module_systemToaster__fIZdf {
+  z-index: var(--system-toast-z-index);
+}</style><style type="text/css">.Toast-module_toast__Woeb- {
+  position: relative;
+  margin: 16px;
+  background-color: var(--color-tone-8);
+  color: var(--color-tone-7);
+  padding: 13px;
+  border: none;
+  border-radius: 4px;
+  opacity: 1;
+  transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.Toast-module_win__7-aZX {
+  background-color: var(--color-correct);
+  color: var(--tile-text-color);
+}
+
+.Toast-module_fade__uPhAg {
+  opacity: 0;
+}</style><style type="text/css">.Error-module_container__BMcmT {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-height: calc(100% - var(--header-height) - 1px);
+  left: 0;
+  justify-content: center;
+  background-color: var(--error-background);
+  -webkit-animation: Error-module_SlideIn__9w2wl 100ms linear;
+          animation: Error-module_SlideIn__9w2wl 100ms linear;
+  z-index: var(--error-z-index);
+}
+
+.Error-module_errorContainer__5f0-O {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  position: relative;
+  top: 166px;
+  font-family: "nyt-franklin";
+}
+
+.Error-module_errorText__aINs5 {
+  font-family: "nyt-franklin-400";
+  text-align: center;
+  margin-top: 40px;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--color-tone-1);
+}
+
+.Error-module_errorTilesContainer__7SZD5 {
+  width: 208px;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.Error-module_errorTiles__miCkr {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  border: 1.27px solid var(--lightGray);
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.Error-module_backButton__qhfix {
+  margin-top: 24px;
+  border-radius: 24px;
+  width: 150px;
+  height: 48px;
+  font-family: "nyt-franklin-600";
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  background-color: var(--color-tone-1);
+  box-shadow: none;
+  border: none;
+  color: var(--color-tone-7);
+}
+
+@-webkit-keyframes Error-module_SlideIn__9w2wl {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes Error-module_SlideIn__9w2wl {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes Error-module_SlideOut__uVOvc {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+}
+@keyframes Error-module_SlideOut__uVOvc {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+}</style><style type="text/css">.Key-module_key__Rv-Vp {
+  font-family: inherit;
+  font-weight: bold;
+  border: 0;
+  padding: 0;
+  margin: 0 6px 0 0;
+  height: 58px;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: var(--key-bg);
+  color: var(--key-text-color);
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
+}
+.Key-module_key__Rv-Vp:focus {
+  outline: none;
+}
+.Key-module_key__Rv-Vp:last-of-type {
+  margin: 0;
+}
+.Key-module_key__Rv-Vp[data-state=correct] {
+  background-color: var(--key-bg-correct);
+  color: var(--key-evaluated-text-color);
+}
+.Key-module_key__Rv-Vp[data-state=present] {
+  background-color: var(--key-bg-present);
+  color: var(--key-evaluated-text-color);
+}
+.Key-module_key__Rv-Vp[data-state=absent] {
+  background-color: var(--key-bg-absent);
+  color: var(--key-evaluated-text-color);
+}
+.Key-module_key__Rv-Vp.Key-module_fade__37Hk8 {
+  transition: background-color 0.1s ease, color 0.1s ease;
+}
+
+.Key-module_half__ljsj8 {
+  flex: 0.5;
+}
+
+.Key-module_one__HBOou {
+  flex: 1;
+}
+
+.Key-module_oneAndAHalf__K6JBY {
+  flex: 1.5;
+  font-size: 12px;
+}</style><style type="text/css">.Keyboard-module_keyboard__1HSnn {
+  height: var(--keyboard-height);
+  margin: 0 8px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.Keyboard-module_row__YWe5w {
+  display: flex;
+  width: 100%;
+  margin: 0 auto 8px;
+  /* https://stackoverflow.com/questions/46167604/ios-html-disable-double-tap-to-zoom */
+  touch-action: manipulation;
+}</style><style type="text/css">.Row-module_row__dEHfN {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 5px;
+}
+.Row-module_row__dEHfN.Row-module_invalid__16kR1 {
+  -webkit-animation-name: Row-module_Shake__4i0T3;
+          animation-name: Row-module_Shake__4i0T3;
+  -webkit-animation-duration: 600ms;
+          animation-duration: 600ms;
+}
+
+.Row-module_win__NF7uy {
+  -webkit-animation-name: Row-module_Bounce__7NO2t;
+          animation-name: Row-module_Bounce__7NO2t;
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+}
+
+@-webkit-keyframes Row-module_Bounce__7NO2t {
+  0%, 20% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+  80% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes Row-module_Bounce__7NO2t {
+  0%, 20% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+  80% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes Row-module_Shake__4i0T3 {
+  10%, 90% {
+    transform: translateX(-1px);
+  }
+  20%, 80% {
+    transform: translateX(2px);
+  }
+  30%, 50%, 70% {
+    transform: translateX(-4px);
+  }
+  40%, 60% {
+    transform: translateX(4px);
+  }
+}
+@keyframes Row-module_Shake__4i0T3 {
+  10%, 90% {
+    transform: translateX(-1px);
+  }
+  20%, 80% {
+    transform: translateX(2px);
+  }
+  30%, 50%, 70% {
+    transform: translateX(-4px);
+  }
+  40%, 60% {
+    transform: translateX(4px);
+  }
+}</style><style type="text/css">.Board-module_boardContainer__cKb-C {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.Board-module_board__lbzlf {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+}</style><style type="text/css">.AppHeader-module_appHeader__1Ehyv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding: 0 16px;
+  height: var(--header-height);
+  color: var(--color-tone-1);
+  border-bottom: 1px solid var(--color-tone-4);
+}
+.AppHeader-module_appHeader__1Ehyv button.AppHeader-module_icon__x7b46 {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+.AppHeader-module_appHeader__1Ehyv .AppHeader-module_title__6sqs- {
+  font-family: "nyt-karnakcondensed";
+  font-weight: 700;
+  font-size: 37px;
+  line-height: 100%;
+  letter-spacing: 0.01em;
+  text-align: center;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  position: relative;
+}
+.AppHeader-module_appHeader__1Ehyv .AppHeader-module_title__6sqs- .AppHeader-module_superscript__Q2Wde {
+  position: absolute;
+  top: -0.8em;
+  font-size: 40%;
+}
+
+.AppHeader-module_menuLeft__iErDO {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  width: 70px;
+  justify-content: flex-start;
+}
+
+.AppHeader-module_menuRight__jUeYn {
+  display: flex;
+  width: 70px;
+  justify-content: flex-end;
+}
+
+#AppHeader-module_navButton__fB5nf {
+  padding-top: 2px;
+}
+
+@media (min-width: 415px) {
+  .AppHeader-module_appHeader__1Ehyv {
+    padding: 0px 16px;
+  }
+}
+@media (max-width: 360px) {
+  .AppHeader-module_appHeader__1Ehyv .AppHeader-module_title__6sqs- {
+    font-size: 22px;
+    letter-spacing: 0.1rem;
+  }
+}</style><style type="text/css">.App-module_game__NSc-J {
+  width: 100%;
+  max-width: var(--game-max-width);
+  margin: 0 auto;
+  height: calc(100% - var(--header-height));
+  display: flex;
+  flex-direction: column;
+}
+
+.pz-offline-ticker {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}</style><script src="./Wordle - The New York Times_files/gpt.js(1).download" async=""></script><meta http-equiv="origin-trial" content="AzoawhTRDevLR66Y6MROu167EDncFPBvcKOaQispTo9ouEt5LvcBjnRFqiAByRT+2cDHG1Yj4dXwpLeIhc98/gIAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A6+nc62kbJgC46ypOwRsNW6RkDn2x7tgRh0wp7jb3DtFF7oEhu1hhm4rdZHZ6zXvnKZLlYcBlQUImC4d3kKihAcAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/9La288e7MDEU2ifusFnMg1C2Ij6uoa/Z/ylwJIXSsWfK37oESIPbxbt4IU86OGqDEPnNVruUiMjfKo65H/CQwAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><script src="./Wordle - The New York Times_files/pubads_impl_2022062701.js.download" async=""></script><meta http-equiv="origin-trial" content="A9wkrvp9y21k30U9lU7MJMjBj4USjLrGwV+Z8zO3J3ZBH139DOnCv3XLK2Ii40S94HG1SZ/Zeg2GSHOD3wlWngYAAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><script type="text/javascript" src="./Wordle - The New York Times_files/show-ads.js.download"></script></head><body class="dark"><iframe marginwidth="0" marginheight="0" scrolling="no" frameborder="0" height="0" width="0" id="mnet" src="./Wordle - The New York Times_files/checksync.html" style="display: none !important;" data-dashlane-frameid="73"></iframe><header class="AppHeader-module_appHeader__1Ehyv wordle-app-header"><div class="AppHeader-module_menuLeft__iErDO"><button type="button" id="AppHeader-module_navButton__fB5nf" class="AppHeader-module_icon__x7b46" aria-label="Navigation menu. Click for links to other NYT Games and our Privacy Policy." tabindex="-1"><svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.172974" width="20" height="3" rx="1.5" fill="var(--color-tone-1)"></rect><rect x="0.172974" y="7" width="20" height="3" rx="1.5" fill="var(--color-tone-1)"></rect><rect x="0.172974" y="14" width="20" height="3" rx="1.5" fill="var(--color-tone-1)"></rect></svg></button><button type="button" id="help-button" class="AppHeader-module_icon__x7b46" aria-label="Help" tabindex="-1"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" class="game-icon" data-testid="icon-help"><path fill="var(--color-tone-1)" d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"></path></svg></button></div><div class="AppHeader-module_title__6sqs-">Wordle</div><div class="AppHeader-module_menuRight__jUeYn"><button type="button" id="statistics-button" class="AppHeader-module_icon__x7b46" aria-label="Statistics" tabindex="-1"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" class="game-icon" data-testid="icon-statistics"><path fill="var(--color-tone-1)" d="M16,11V3H8v6H2v12h20V11H16z M10,5h4v14h-4V5z M4,11h4v8H4V11z M20,19h-4v-6h4V19z"></path></svg></button><button type="button" id="settings-button" class="AppHeader-module_icon__x7b46" aria-label="Settings" tabindex="-1"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" class="game-icon" data-testid="icon-settings"><path fill="var(--color-tone-1)" d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"></path></svg></button></div></header><div class="App-module_game__NSc-J" id="wordle-app-game"><div class="Board-module_boardContainer__cKb-C"><div class="Board-module_board__lbzlf" style="width: 350px; height: 420px;"><div class="Row-module_row__dEHfN"><div class="" style="animation-delay: 0ms;"><div class="Tile-module_tile__3ayIZ" data-state="absent" data-animation="idle" data-testid="tile">r</div></div><div class="" style="animation-delay: 100ms;"><div class="Tile-module_tile__3ayIZ" data-state="absent" data-animation="idle" data-testid="tile">a</div></div><div class="" style="animation-delay: 200ms;"><div class="Tile-module_tile__3ayIZ" data-state="present" data-animation="idle" data-testid="tile">t</div></div><div class="" style="animation-delay: 300ms;"><div class="Tile-module_tile__3ayIZ" data-state="present" data-animation="idle" data-testid="tile">i</div></div><div class="" style="animation-delay: 400ms;"><div class="Tile-module_tile__3ayIZ" data-state="correct" data-animation="idle" data-testid="tile">o</div></div></div><div class="Row-module_row__dEHfN"><div class="" style="animation-delay: 0ms;"><div class="Tile-module_tile__3ayIZ" data-state="absent" data-animation="idle" data-testid="tile">m</div></div><div class="" style="animation-delay: 100ms;"><div class="Tile-module_tile__3ayIZ" data-state="absent" data-animation="idle" data-testid="tile">e</div></div><div class="" style="animation-delay: 200ms;"><div class="Tile-module_tile__3ayIZ" data-state="correct" data-animation="idle" data-testid="tile">n</div></div><div class="" style="animation-delay: 300ms;"><div class="Tile-module_tile__3ayIZ" data-state="absent" data-animation="idle" data-testid="tile">d</div></div><div class="" style="animation-delay: 400ms;"><div class="Tile-module_tile__3ayIZ" data-state="absent" data-animation="idle" data-testid="tile">s</div></div></div><div class="Row-module_row__dEHfN"><div class="" style="animation-delay: 0ms;"><div class="Tile-module_tile__3ayIZ" data-state="absent" data-animation="idle" data-testid="tile">l</div></div><div class="" style="animation-delay: 100ms;"><div class="Tile-module_tile__3ayIZ" data-state="absent" data-animation="idle" data-testid="tile">u</div></div><div class="" style="animation-delay: 200ms;"><div class="Tile-module_tile__3ayIZ" data-state="absent" data-animation="idle" data-testid="tile">c</div></div><div class="" style="animation-delay: 300ms;"><div class="Tile-module_tile__3ayIZ" data-state="absent" data-animation="idle" data-testid="tile">k</div></div><div class="" style="animation-delay: 400ms;"><div class="Tile-module_tile__3ayIZ" data-state="absent" data-animation="idle" data-testid="tile">y</div></div></div><div class="Row-module_row__dEHfN"><div class="Row-module_win__NF7uy" style="animation-delay: 0ms;"><div class="Tile-module_tile__3ayIZ" data-state="correct" data-animation="idle" data-testid="tile">p</div></div><div class="Row-module_win__NF7uy" style="animation-delay: 100ms;"><div class="Tile-module_tile__3ayIZ" data-state="correct" data-animation="idle" data-testid="tile">i</div></div><div class="Row-module_win__NF7uy" style="animation-delay: 200ms;"><div class="Tile-module_tile__3ayIZ" data-state="correct" data-animation="idle" data-testid="tile">n</div></div><div class="Row-module_win__NF7uy" style="animation-delay: 300ms;"><div class="Tile-module_tile__3ayIZ" data-state="correct" data-animation="idle" data-testid="tile">t</div></div><div class="Row-module_win__NF7uy" style="animation-delay: 400ms;"><div class="Tile-module_tile__3ayIZ" data-state="correct" data-animation="idle" data-testid="tile">o</div></div></div><div class="Row-module_row__dEHfN"><div class="" style="animation-delay: 0ms;"><div class="Tile-module_tile__3ayIZ" data-state="empty" data-animation="idle" data-testid="tile"></div></div><div class="" style="animation-delay: 100ms;"><div class="Tile-module_tile__3ayIZ" data-state="empty" data-animation="idle" data-testid="tile"></div></div><div class="" style="animation-delay: 200ms;"><div class="Tile-module_tile__3ayIZ" data-state="empty" data-animation="idle" data-testid="tile"></div></div><div class="" style="animation-delay: 300ms;"><div class="Tile-module_tile__3ayIZ" data-state="empty" data-animation="idle" data-testid="tile"></div></div><div class="" style="animation-delay: 400ms;"><div class="Tile-module_tile__3ayIZ" data-state="empty" data-animation="idle" data-testid="tile"></div></div></div><div class="Row-module_row__dEHfN"><div class="" style="animation-delay: 0ms;"><div class="Tile-module_tile__3ayIZ" data-state="empty" data-animation="idle" data-testid="tile"></div></div><div class="" style="animation-delay: 100ms;"><div class="Tile-module_tile__3ayIZ" data-state="empty" data-animation="idle" data-testid="tile"></div></div><div class="" style="animation-delay: 200ms;"><div class="Tile-module_tile__3ayIZ" data-state="empty" data-animation="idle" data-testid="tile"></div></div><div class="" style="animation-delay: 300ms;"><div class="Tile-module_tile__3ayIZ" data-state="empty" data-animation="idle" data-testid="tile"></div></div><div class="" style="animation-delay: 400ms;"><div class="Tile-module_tile__3ayIZ" data-state="empty" data-animation="idle" data-testid="tile"></div></div></div></div></div><div class="Keyboard-module_keyboard__1HSnn"><div class="Keyboard-module_row__YWe5w"><button type="button" data-key="q" class="Key-module_key__Rv-Vp">q</button><button type="button" data-key="w" class="Key-module_key__Rv-Vp">w</button><button type="button" data-key="e" class="Key-module_key__Rv-Vp Key-module_fade__37Hk8" data-state="absent">e</button><button type="button" data-key="r" class="Key-module_key__Rv-Vp Key-module_fade__37Hk8" data-state="absent">r</button><button type="button" data-key="t" class="Key-module_key__Rv-Vp" data-state="correct">t</button><button type="button" data-key="y" class="Key-module_key__Rv-Vp Key-module_fade__37Hk8" data-state="absent">y</button><button type="button" data-key="u" class="Key-module_key__Rv-Vp Key-module_fade__37Hk8" data-state="absent">u</button><button type="button" data-key="i" class="Key-module_key__Rv-Vp" data-state="correct">i</button><button type="button" data-key="o" class="Key-module_key__Rv-Vp Key-module_fade__37Hk8" data-state="correct">o</button><button type="button" data-key="p" class="Key-module_key__Rv-Vp Key-module_fade__37Hk8" data-state="correct">p</button></div><div class="Keyboard-module_row__YWe5w"><div data-testid="spacer" class="Key-module_half__ljsj8"></div><button type="button" data-key="a" class="Key-module_key__Rv-Vp Key-module_fade__37Hk8" data-state="absent">a</button><button type="button" data-key="s" class="Key-module_key__Rv-Vp Key-module_fade__37Hk8" data-state="absent">s</button><button type="button" data-key="d" class="Key-module_key__Rv-Vp Key-module_fade__37Hk8" data-state="absent">d</button><button type="button" data-key="f" class="Key-module_key__Rv-Vp">f</button><button type="button" data-key="g" class="Key-module_key__Rv-Vp">g</button><button type="button" data-key="h" class="Key-module_key__Rv-Vp">h</button><button type="button" data-key="j" class="Key-module_key__Rv-Vp">j</button><button type="button" data-key="k" class="Key-module_key__Rv-Vp Key-module_fade__37Hk8" data-state="absent">k</button><button type="button" data-key="l" class="Key-module_key__Rv-Vp Key-module_fade__37Hk8" data-state="absent">l</button><div data-testid="spacer" class="Key-module_half__ljsj8"></div></div><div class="Keyboard-module_row__YWe5w"><button type="button" data-key="↵" class="Key-module_key__Rv-Vp Key-module_oneAndAHalf__K6JBY">enter</button><button type="button" data-key="z" class="Key-module_key__Rv-Vp">z</button><button type="button" data-key="x" class="Key-module_key__Rv-Vp">x</button><button type="button" data-key="c" class="Key-module_key__Rv-Vp Key-module_fade__37Hk8" data-state="absent">c</button><button type="button" data-key="v" class="Key-module_key__Rv-Vp">v</button><button type="button" data-key="b" class="Key-module_key__Rv-Vp">b</button><button type="button" data-key="n" class="Key-module_key__Rv-Vp Key-module_fade__37Hk8" data-state="correct">n</button><button type="button" data-key="m" class="Key-module_key__Rv-Vp Key-module_fade__37Hk8" data-state="absent">m</button><button type="button" data-key="←" class="Key-module_key__Rv-Vp Key-module_oneAndAHalf__K6JBY"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" class="game-icon" data-testid="icon-backspace"><path fill="var(--color-tone-1)" d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H7.07L2.4 12l4.66-7H22v14zm-11.59-2L14 13.41 17.59 17 19 15.59 15.41 12 19 8.41 17.59 7 14 10.59 10.41 7 9 8.41 12.59 12 9 15.59z"></path></svg></button></div></div><div class="ToastContainer-module_toaster__QDad3" id="ToastContainer-module_gameToaster__yjzPn"></div><div class="ToastContainer-module_toaster__QDad3" id="ToastContainer-module_systemToaster__fIZdf"></div></div><script type="text/javascript" id="">window.iterateSettings={apiKey:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb21wYW55X2lkIjoiNWMwOThiM2QxNjU0YzEwMDAxMmM2OGY5IiwiaWF0IjoxNTQ0MTI5MzQxfQ.UI13nEXGs0udbZxhjyFLruAEed42XwFO4fZlCqOgY1o"};
+(function(a,d,f,g,h){function e(){b=d.createElement(f);b.id=g;b.async=1;b.src="https://platform.iteratehq.com/loader.js";k.parentNode.insertBefore(b,k)}if(!d.getElementById(g)){a.IterateObjectName=h;var c=function(){c.c(arguments)};c.q=[];c.c=function(l){c.q.push(l)};a[h]=c;var b,k=d.getElementsByTagName(f)[0];"complete"===d.readyState?e():a.attachEvent?a.attachEvent("onload",e):a.addEventListener("load",e,!1)}})(window,document,"script","iterate-js","Iterate");</script>
+<script type="text/javascript" id="">try{if(window.Iterate&&"function"===typeof Iterate){var subscriberInfo="",uType="undefined",eduSubscriber="object"===typeof subscriberInfo?subscriberInfo.eduSubscriber:"",userType="string"===typeof uType?uType:"",params={eduSubscriber:eduSubscriber,userType:userType};Iterate("identify",params)}}catch(a){console.log(a)};</script><iframe height="0" width="0" style="display: none; visibility: hidden;" src="./Wordle - The New York Times_files/activityi.html" data-dashlane-frameid="75"></iframe><script type="text/javascript" id="" src="./Wordle - The New York Times_files/50550"></script><script type="text/javascript" id="">window.parent===window&&function(){function d(){var a;return a=(a=unescape(document.cookie).match("NYT-Edition\x3d([^;]+)"))&&a[1]&&-1!==a[1].indexOf("edition|GLOBAL")?"international.nytimes.com":/^\/(games|crosswords|puzzles)/.test(document.location.pathname)?"games.nytimes.com":"nytimes.com"}function b(){var a;regex=/(^.*)(nytimes.com.*)/;return a=google_tag_manager["GTM-P528B3"].macro(61)&&google_tag_manager["GTM-P528B3"].macro(62).match(regex)[2]}function c(){var a=[];"Homepage"===google_tag_manager["GTM-P528B3"].macro(63)?a.push("Homepage"):(google_tag_manager["GTM-P528B3"].macro(64)&&
+a.push(google_tag_manager["GTM-P528B3"].macro(65)),google_tag_manager["GTM-P528B3"].macro(66)&&a.push(google_tag_manager["GTM-P528B3"].macro(67)),google_tag_manager["GTM-P528B3"].macro(68)&&a.push(google_tag_manager["GTM-P528B3"].macro(69)),/parenting\./.test(document.location.host)&&a.push("parenting"),0===a.length&&/\/202\d\/\d\d\/\d\d\/us\/elections\/results/.test(document.location.href)&&(a.push("us"),a.push("Elections")));return a.join(",")}if("object"==typeof window._sf_async_config&&"object"==typeof pSUPERFLY&&"function"==typeof pSUPERFLY.virtualPage)pSUPERFLY.virtualPage({sections:c(),path:b(),
+title:google_tag_manager["GTM-P528B3"].macro(70)||document.title});else{window._sf_async_config={uid:16698,domain:d(),pingServer:"pnytimes.chartbeat.net",useCanonical:!0,path:b(),title:google_tag_manager["GTM-P528B3"].macro(71)||document.title};_cbq=window._cbq=window._cbq||[];switch(google_tag_manager["GTM-P528B3"].macro(72)){case "sub":_cbq.push(["_acct","paid"]);break;case "anon":_cbq.push(["_acct","anon"]);break;case "regi":_cbq.push(["_acct","lgdin"])}try{window._sf_async_config.sections=c()}catch(a){}try{window._sf_async_config.authors=Array.isArray(google_tag_manager["GTM-P528B3"].macro(73))&&
+google_tag_manager["GTM-P528B3"].macro(74).join(",")}catch(a){}window._sf_endpt=(new Date).getTime();firstScript=document.getElementsByTagName("script")[0];cbScript=document.createElement("script");cbScript.async=!0;cbScript.src="https://static.chartbeat.com/js/chartbeat.js";firstScript.parentNode.insertBefore(cbScript,firstScript)}}();</script>
+<iframe name="__bkframe" height="0" width="0" frameborder="0" style="display:none;position:absolute;clip:rect(0px 0px 0px 0px)" src="./Wordle - The New York Times_files/saved_resource.html" data-dashlane-frameid="76"></iframe> 
+<script type="text/javascript" id="" src="./Wordle - The New York Times_files/bk-coretag.js.download"></script><script type="text/javascript" id="">(function(){function c(d,a){var b=document.createElement("script");b.type="text/javascript";a&&(b.onload=a,b.onerror=a);a=document.getElementsByTagName("head")[0];a.appendChild(b);b.src=d}c("https://a1.nyt.com/analytics/show-ads.js",function(){window.nyt_et&&nyt_et({subject:"page_update",adBlockEnabled:!1!==window.adBlockDetected})})})();</script>  <script type="text/javascript" id="" src="./Wordle - The New York Times_files/comscore-streaming.js.download"></script><script type="text/javascript" id="">(function(b){function f(){if("MozAppearance"in document.documentElement.style){var a=indexedDB.open("test");a.onerror=c;a.onsuccess=d;return!0}}function e(a){b.nyt_et&&nyt_et({subject:"page_update",isIncognito:a})}var c,d;b.nyt_et&&function(a,g){c=a||function(){};d=g||function(){};b.webkitRequestFileSystem?(b.webkitRequestFileSystem(b.TEMPORARY,1,d,c),a=!0):a=void 0;if(!(a=a||f()))a:if(0<Object.prototype.toString.call(b.HTMLElement).indexOf("Constructor")||"[object SafariRemoteNotification]"===(!b.safari||
+safari.pushNotification).toString()||b.localStorage&&/Safari/.test(b.navigator.userAgent)){try{b.openDatabase(null,null,null,null)}catch(h){c();a=!0;break a}try{localStorage.length||(localStorage.x=1,localStorage.removeItem("x")),d()}catch(h){navigator.cookieEnabled?c():d()}a=!0}else a=void 0;a||(b.indexedDB||!b.PointerEvent&&!b.MSPointerEvent?a=void 0:(c(),a=!0));a||d()}(function(){e(!0)},function(){e(!1)})})(window);</script><script type="text/javascript" id="">(function(){window.nyt_et&&nyt_et("send",{subject:"page_update",jsonKidd:google_tag_manager["GTM-P528B3"].macro(115),canonicalUrl:(document.querySelector("link[rel\x3dcanonical]")||{}).href,assetId:(document.querySelector("meta[name\x3darticleid]")||{}).content,nyt_uri:(document.querySelector("meta[name\x3dnyt_uri]")||{}).content,url:location.href,referrer:"https:\/\/www.google.com\/",client_tz_offset:(new Date).getTimezoneOffset(),sourceApp:google_tag_manager["GTM-P528B3"].macro(121),gtm:google_tag_manager["GTM-P528B3"].macro(122),presentation:google_tag_manager["GTM-P528B3"].macro(123),
+web_app:{releaseVersion:google_tag_manager["GTM-P528B3"].macro(124)}})})();</script><script type="text/javascript" id="" src="./Wordle - The New York Times_files/nyt.js.download"></script> 
+<script type="text/javascript" id="">(function(){var d=function(a){var e,b,d=[{name:"Bot",regex:"(GomezAgent|yandex.com/bots|(Googlebot|bingbot|YandexBot|facebookexternalhit)/[\\d]+(?:.[\\d]+)?)"},{name:"UC Browser",regex:"(UCMini|UCBrowser)/([\\d]+)(.[\\d]+)*"},{name:"Opera",regex:"(OPR|Opera)[/ ]([\\d]+)(.[\\d]+)*"},{name:"Sogou Explorer",regex:"(SE) ([\\d]+)(.[a-zA-Z\\d]+)*"},{name:"",regex:"(Avant Browser)"},{name:"",regex:"((?:Mobile)?Iron|Puffin|Maxthon|Chromium|Sleipnir|Lightning|QQBrowser|Silk|chromeframe|iCab|Arora|Kindle|Midori|rekonq|Vienna|Epiphany|NetFront|konqueror|PhantomJS|YaBrowser|IEMobile|PaleMoon|Thunderbird|SeaMonkey|baidubrowser|NokiaBrowser|Edge|Avant Browser|Iceweasel|K-Meleon)/([\\d]+)(.[\\d]+)*"},
+{name:"",regex:"(Lunascape)[/ ]([\\d]+)(.[\\d]+)*"},{name:"Firefox",regex:"(Firefox)/([\\d]+)(.[\\d]+)*"},{name:"MSIE",regex:"(?:(Windows).* Trident/([\\d]+)(.[\\d]+)*|(MSIE) ([\\d]+)(.[\\d]+)*)"},{name:"Chrome",regex:"(Chrome)/([\\d]+)(.[\\d]+)*"},{name:"Android Browser",regex:"(Android)[ /]([\\d]+)(?:.[\\d]+.[\\d]+)?.*(Mobile )?Safari"},{name:"BlackBerry Browser",regex:"(BlackBerry|BB[\\d]+);.*Mobile Safari"},{name:"",regex:"(OmniWeb)/v([\\d]+)(?:.[\\d]+)"},{name:"Chrome iOS",regex:"(CriOS)/([\\d]+)(?:.[\\d]+)*"},
+{name:"Safari",regex:"(?:Version/([\\d]+)(?:.[\\d]+)* )?(Safari)/(?:[\\d]+(?:.[\\d]+)*)",mobileRegex:"(iPhone; CPU iPhone OS|iPad; CPU OS).*Mobile/"},{name:"Facebook App",regex:"\\[(FBAN).*FBAV/([\\d]+)(.[\\d]+)*.*\\]?"},{name:"NYT App",regex:"(NYTimes(-[a-zA-Z]+)?|Crosswords|NYTNow|Cooking|NYTOpinion|)/([\\d]+)(.[\\d]+)* CFNetwork/([\\d]+)(.[\\d]+)*"},{name:"AppleWebKit Based Browser",regex:"(AppleWebKit)/([\\d]+)(.[\\d]+)*"}];for(e=0;e<d.length;e++){var c=d[e];if((b=(new RegExp(c.regex)).exec(a))&&
+1<b.length)return e=c.name||b[1],c.mobileRegex&&(new RegExp(c.mobileRegex)).test(a)&&(e+=" Mobile"),e}return"Unknown"},a=function(a){return"object"===typeof a&&a instanceof Array?a.filter(function(a){return""!==a}).map(function(a){return a.replace(/,/g," ")}):[]},h=google_tag_manager["GTM-P528B3"].macro(75)||(document.querySelector("meta[name\x3dCG]")||{}).content,k="";if(!/Homepage/i.test(h)){k=a(google_tag_manager["GTM-P528B3"].macro(76));var l=a(google_tag_manager["GTM-P528B3"].macro(77)||google_tag_manager["GTM-P528B3"].macro(78)||[]),b=a(google_tag_manager["GTM-P528B3"].macro(79));a=a(google_tag_manager["GTM-P528B3"].macro(80));
+k=k.concat(l).concat(b).concat(a).join(",")}bk_ignore_meta=!0;l=function(a){var b=[];if(null!=a&&""!=a)for(var c in a)null!=a[c]&&"InclusionFlag"in a[c]&&1==a[c].InclusionFlag&&b.push(c);return b.join(",")};bk_addPageCtx("regid",google_tag_manager["GTM-P528B3"].macro(81));a=google_tag_manager["GTM-P528B3"].macro(82)||{};b=google_tag_manager["GTM-P528B3"].macro(83)||{};b=b.subscriptions||[];var c=!1;0<b.length&&(c="F"==b[0].grace?!1:!0);bk_addPageCtx("usertype",google_tag_manager["GTM-P528B3"].macro(84));bk_addPageCtx("userloggedin",google_tag_manager["GTM-P528B3"].macro(85));bk_addPageCtx("coresubtenure",
+a.coreSubscriptionTenure?a.coreSubscriptionTenure:"");bk_addPageCtx("corestop",a.coreStopCode?a.coreStopCode:"");bk_addPageCtx("corepromo",!!a.coreOnPromotion);bk_addPageCtx("ingrace",c);bk_addPageCtx("giftrecipient",!!a.giftSubscriptionRecipient);bk_addPageCtx("childsubrecipient",!!a.childSubscription);bk_addPageCtx("bundlecoredigi",a.coreDigiBundle?a.coreDigiBundle:"");bk_addPageCtx("bundlecorehd",a.coreHDBundle?a.coreHDBundle:"");bk_addPageCtx("bundlexword",a.crosswordStandaloneBundle?a.crosswordStandaloneBundle:
+"");bk_addPageCtx("bundlecooking",a.cookingStandaloneBundle?a.cookingStandaloneBundle:"");bk_addPageCtx("bundleother",a.otherBundle?a.otherBundle:"");bk_addPageCtx("b2bentitle",!!a.b2bSubscription);bk_addPageCtx("marketingoptin",!!a.marketingOptIn);bk_addPageCtx("formercoresub",!!a.formerCoreSubscriber);bk_addPageCtx("formeredusub",!!a.formerEduSubscriber);bk_addPageCtx("formerhdsub",!!a.formerHDSubscriber);bk_addPageCtx("retentionscore",a.retentionSegment||"");bk_addPageCtx("topwatseg",google_tag_manager["GTM-P528B3"].macro(86));
+bk_addPageCtx("sassegment",a.sasSegment||"");bk_addPageCtx("hdstopreasoncode",a.hdStopReasonCode||"");bk_addPageCtx("regitenure",a.regiTenure||"");bk_addPageCtx("cookinggrace",!!a.cookingGrace);bk_addPageCtx("crosswordsgrace",!!a.crosswordsGrace);bk_addPageCtx("gatewayhitlm",!!a.gatewayHitLM);bk_addPageCtx("coregracelevel",!!a.coreGraceLevel);bk_addPageCtx("activedaysengagement",a.engagementActiveDays||"");bk_addPageCtx("authors",(google_tag_manager["GTM-P528B3"].macro(87)||[]).join(",")||"");bk_addPageCtx("newsletter",
+a.newsletterList||"");b=google_tag_manager["GTM-P528B3"].macro(88);c="";if(null!=b){try{var f=JSON.parse(unescape(b))}catch(e){f={}}f.isCorpUser&&(c=f.orgName)}bk_addPageCtx("businessname",c);bk_addPageCtx("corpadblock",/CORP_ADBLOCK/i.test(b));f=google_tag_manager["GTM-P528B3"].macro(89);c=b="";if(null!=f){try{var g=JSON.parse(unescape(f))}catch(e){g={}}if(c=g.isEduUser||"")b=g.nickName}bk_addPageCtx("isedu",c);bk_addPageCtx("propensityedu",b);bk_addPageCtx("propensityscore",google_tag_manager["GTM-P528B3"].macro(90));bk_addPageCtx("activedays",google_tag_manager["GTM-P528B3"].macro(91));
+g=google_tag_manager["GTM-P528B3"].macro(93)||{};bk_addPageCtx("metercount",g.v||"");bk_addPageCtx("propensitysection",google_tag_manager["GTM-P528B3"].macro(94));bk_addPageCtx("propensitytype",google_tag_manager["GTM-P528B3"].macro(95));bk_addPageCtx("propensitysite",google_tag_manager["GTM-P528B3"].macro(96));bk_addPageCtx("url",window.location.href);bk_addPageCtx("referrer",google_tag_manager["GTM-P528B3"].macro(101));bk_addPageCtx("section",h);h=google_tag_manager["GTM-P528B3"].macro(102)||"";bk_addPageCtx("subsection",h);bk_addPageCtx("pagetype",google_tag_manager["GTM-P528B3"].macro(103));bk_addPageCtx("keywords",k);bk_addPageCtx("sourceapp",
+google_tag_manager["GTM-P528B3"].macro(104));bk_addPageCtx("browsername",d(navigator.userAgent));bk_addPageCtx("funnelpropensity",google_tag_manager["GTM-P528B3"].macro(105));bk_addPageCtx("column",google_tag_manager["GTM-P528B3"].macro(106));d=google_tag_manager["GTM-P528B3"].macro(107)||[];bk_addPageCtx("collectionname",d.join(","));bk_addPageCtx("contenttype",google_tag_manager["GTM-P528B3"].macro(108));d=l(google_tag_manager["GTM-P528B3"].macro(109));bk_addPageCtx("emotions",d);"object"===typeof bk_optly&&bk_optly instanceof Array&&0<bk_optly.length&&(bk_addPageCtx("optlyexpname",bk_optly[0].experience||""),bk_addPageCtx("optlyexpvariant",
+bk_optly[0].variant||""));bk_addPageCtx("xwordstenure",a.crosswordsSubscriptionTenure?a.crosswordsSubscriptionTenure:"");bk_addPageCtx("cookingtenure",a.cookingSubscriptionTenure?a.cookingSubscriptionTenure:"");bk_addPageCtx("xwordsstop",a.crosswordsStopCode?a.crosswordsStopCode:"");bk_addPageCtx("cookingstop",a.cookingStopCode?a.cookingStopCode:"");bk_addPageCtx("productswitch",a.productSwitch?a.productSwitch:"");bk_addPageCtx("giftsubgiver",!!a.giftGiver);bk_addPageCtx("formerxwordsub",!!a.formerCrosswordSubscriber);
+bk_addPageCtx("formercookingsub",!!a.formerCookingSubscriber);bk_addPageCtx("watsegs",a.watString?a.watString:"");bk_addPageCtx("edusub",a.eduSubscriber?a.eduSubscriber:"");bk_addPageCtx("aiqaudience",(google_tag_manager["GTM-P528B3"].macro(110)||[]).map(function(a){return a[0]}).join(","));d=50134;navigator.userAgent.match(/Android|iPhone|iPad|iPod|Windows Phone|webOS|BlackBerry|RIM/i)&&(d=50747);bk_allow_multiple_calls=!0;bk_doJSTag(d,4)})();</script>
+<script type="text/javascript" async="true" src="./Wordle - The New York Times_files/65568.js.download"></script></body>
+<style type="text/css">
+.dark {
+    --color-present: var(--darkendYellow);
+    --color-correct: var(--darkendGreen);
+    --color-absent: var(--color-tone-4);
+    --tile-text-color: var(--color-tone-1);
+    --key-text-color: var(--color-tone-1);
+    --key-evaluated-text-color: var(--color-tone-1);
+    --key-bg: var(--color-tone-2);
+    --key-bg-present: var(--color-present);
+    --key-bg-correct: var(--color-correct);
+    --key-bg-absent: var(--color-absent);
+    --modal-content-bg: var(--color-tone-7);
+}
+:root, .dark {
+    --color-background: var(--color-tone-7);
+}
+.dark {
+    --color-tone-1: #ffffff;
+    --color-tone-2: #818384;
+    --color-tone-3: #565758;
+    --color-tone-4: #3a3a3c;
+    --color-tone-5: #272729;
+    --color-tone-6: #1a1a1b;
+    --color-tone-7: #121213;
+    --color-tone-8: #ffffff;
+    --color-nav-hover: #2f2f31;
+    --opacity-50: rgba(0, 0, 0, 0.5);
+    --error-background: var(--color-tone-7);
+    --icon-disabled: #59595a;
+    --spelling-bee: url(https://www.nytimes.com/games-assets/v2/assets/wordle/nav-icons/SpellingBee-Icon-Normalized-Color.svg);
+    --daily: url(https://www.nytimes.com/games-assets/v2/assets/wordle/nav-icons/Crossword-Icon-Normalized-Color.svg);
+    --mini: url(https://www.nytimes.com/games-assets/v2/assets/wordle/nav-icons/Mini-Icon-Normalized-Color.svg);
+    --tiles: url(https://www.nytimes.com/games-assets/v2/assets/wordle/nav-icons/Tiles-Icon-Normalized-Color.svg);
+    --sudoku: url(https://www.nytimes.com/games-assets/v2/assets/wordle/nav-icons/Sudoku-Icon-Normalized-Color.svg);
+    --vertex: url(https://www.nytimes.com/games-assets/v2/assets/wordle/nav-icons/Vertex-Icon-Normalized-Color.svg);
+    --letter-boxed: url(https://www.nytimes.com/games-assets/v2/assets/wordle/nav-icons/LetterBoxed-Icon-Normalized-Color.svg);
+    --nyt: url(https://www.nytimes.com/games-assets/v2/assets/wordle/nav-icons/NYT-Icon-Normalized-Color.svg);
+    --athletic: url(https://www.nytimes.com/games-assets/v2/assets/wordle/nav-icons/Athletic-Icon-Normalized-Color.svg);
+    --stats-auth: url(https://www.nytimes.com/games-assets/v2/assets/wordle/page-icons/stats-auth-cta.svg);
+    --wordlebot: url(https://www.nytimes.com/games-assets/v2/assets/wordle/nav-icons/WordleBot-Icon-Normalized-Color.svg);
+    --chess: url(https://www.nytimes.com/games-assets/v2/assets/wordle/nav-icons/Chess-Icon-Normalized-Color.svg);
+    --stats-problem: url(https://www.nytimes.com/games-assets/v2/assets/wordle/page-icons/transparent-wordle-issue.svg);
+    --link-info: url(https://www.nytimes.com/games-assets/v2/assets/wordle/page-icons/dark-mode-wordle-link.svg);
+    --gameslogo: url(https://www.nytimes.com/games-assets/v2/assets/wordle/page-icons/whitegameslogo.svg);
+    --promo-icon-height: 27px;
+    --promo-icon-width: 27px;
+    --promo-icon-bg-size: 35px;
+    --promo-icon-padding: 4px;
+    --promo-icon-height: 40px;
+    --promo-icon-width: 40px;
+    --promo-icon-padding: 0px;
+    --svg-arrow-fill: var(--color-tone-7);
+    --svg-arrow-stroke: white;
+    --svg-arrow-fill-hover: white;
+    --svg-arrow-stroke-hover: black;
+}
+body {
+    height: 100%;
+    background-color: var(--color-background);
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+}
+user agent stylesheet
+body {
+    display: block;
+    margin: 8px;
+}
+:root {
+    --color-present: var(--yellow);
+    --color-correct: var(--green);
+    --color-absent: var(--color-tone-2);
+    --tile-text-color: var(--color-tone-7);
+    --key-text-color: var(--color-tone-1);
+    --key-evaluated-text-color: var(--color-tone-7);
+    --key-bg: var(--color-tone-4);
+    --key-bg-present: var(--color-present);
+    --key-bg-correct: var(--color-correct);
+    --key-bg-absent: var(--color-absent);
+    --modal-content-bg: var(--color-tone-7);
+}
+:root {
+    --color-tone-1: #000000;
+    --color-tone-2: #787c7e;
+    --color-tone-3: #878a8c;
+    --color-tone-4: #d3d6da;
+    --color-tone-5: #edeff1;
+    --color-tone-6: #f6f7f8;
+    --color-tone-7: #ffffff;
+    --color-tone-8: #121212;
+    --color-nav-hover: #f4f4f4;
+    --opacity-50: rgba(255, 255, 255, 0.5);
+    --error-background: #e3e3e1;
+    --icon-disabled: #a6a6a6;
+}
+:root {
+    --green: #6aaa64;
+    --darkendGreen: #538d4e;
+    --yellow: #c9b458;
+    --darkendYellow: #b59f3b;
+    --lightGray: #d3d6da;
+    --gray: #86888a;
+    --gray-2: #dcdcdc;
+    --gray-3: #dfdfdf;
+    --darkGray: #939598;
+    --white: #fff;
+    --black: #212121;
+    --black-2: #121212;
+    --black-3: #363636;
+    --orange: #f5793a;
+    --blue: #85c0f9;
+    font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    --header-height: 50px;
+    --keyboard-height: 200px;
+    --game-max-width: 500px;
+    --error-z-index: 500;
+    --toast-z-index: 1000;
+    --modal-z-index: 2000;
+    --page-z-index: 3000;
+    --system-toast-z-index: 4000;
+    --spelling-bee: url(https://www.nytimes.com/games-assets/v2/assets/wordle/nav-icons/SpellingBee-Icon-Normalized.svg);
+    --daily: url(https://www.nytimes.com/games-assets/v2/assets/wordle/nav-icons/Crossword-Icon-Normalized.svg);
+    --mini: url(https://www.nytimes.com/games-assets/v2/assets/wordle/nav-icons/Mini-Icon-Normalized.svg);
+    --tiles: url(https://www.nytimes.com/games-assets/v2/assets/wordle/nav-icons/Tiles-Icon-Normalized.svg);
+    --sudoku: url(https://www.nytimes.com/games-assets/v2/assets/wordle/nav-icons/Sudoku-Icon-Normalized.svg);
+    --vertex: url(https://www.nytimes.com/games-assets/v2/assets/wordle/nav-icons/Vertex-Icon-Normalized.svg);
+    --letter-boxed: url(https://www.nytimes.com/games-assets/v2/assets/wordle/nav-icons/LetterBoxed-Icon-Normalized.svg);
+    --nyt: url(https://www.nytimes.com/games-assets/v2/assets/wordle/nav-icons/NYT-Icon-Normalized.svg);
+    --wirecutter: url(https://www.nytimes.com/games-assets/v2/assets/wordle/nav-icons/Wirecutter-Icon-Normalized.svg);
+    --cooking: url(https://www.nytimes.com/games-assets/v2/assets/wordle/nav-icons/Cooking-Icon-Normalized.svg);
+    --athletic: url(https://www.nytimes.com/games-assets/v2/assets/wordle/nav-icons/Athletic-Icon-Normalized.svg);
+    --stats-auth: url(https://www.nytimes.com/games-assets/v2/assets/wordle/page-icons/stats-auth-cta.svg);
+    --wordlebot: url(https://www.nytimes.com/games-assets/v2/assets/wordle/nav-icons/WordleBot-Icon-Normalized.svg);
+    --chess: url(https://www.nytimes.com/games-assets/v2/assets/wordle/nav-icons/Chess-Icon-Normalized.svg);
+    --gameslogo: url(https://www.nytimes.com/games-assets/v2/assets/wordle/page-icons/gameslogo.svg);
+    --stats-problem: url(https://www.nytimes.com/games-assets/v2/assets/wordle/page-icons/transparent-wordle-issue.svg);
+    --link-info: url(https://www.nytimes.com/games-assets/v2/assets/wordle/page-icons/transparent-wordle-link.svg);
+    --badge-confirm: url(https://www.nytimes.com/games-assets/v2/assets/wordle/page-icons/icon-badge-confirm.svg);
+    --badge-fail: url(https://www.nytimes.com/games-assets/v2/assets/wordle/page-icons/icon-badge-fail.svg);
+    --large-stats: url(https://www.nytimes.com/games-assets/v2/assets/wordle/page-icons/icon-large-stats.svg);
+    --wordle-sb-mini: url(https://www.nytimes.com/games-assets/v2/assets/wordle/page-icons/icon-mini-sb.svg);
+    --wordle-share-mini: url(https://www.nytimes.com/games-assets/v2/assets/wordle/page-icons/icon-mini-share.svg);
+    --wordle-stats-confirm-mini: url(https://www.nytimes.com/games-assets/v2/assets/wordle/page-icons/icon-mini-stats-confirm.svg);
+    --wordle-stats-loaded-mini: url(https://www.nytimes.com/games-assets/v2/assets/wordle/page-icons/icon-mini-stats-loaded.svg);
+    --wordle-stats-mini: url(https://www.nytimes.com/games-assets/v2/assets/wordle/page-icons/icon-mini-stats.svg);
+}
+</style></html>
